@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/pages/3d_page.dart';
+import 'package:flutter_demo/pages/animation_page.dart';
 import 'package:flutter_demo/pages/switch_page.dart';
 import 'package:flutter_demo/pages/tabbar_page.dart';
 import 'package:get/get.dart';
 
 class MainPage extends StatefulWidget {
+  static const routeName = "/MainPage";
   const MainPage({Key key}) : super(key: key);
 
   @override
@@ -11,7 +14,11 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  List list = ["switch", "滑块", "tabbar"];
+  List list = [
+    "switch",
+    "滑块",
+    "tabbar",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +33,12 @@ class _MainPageState extends State<MainPage> {
           }),
           itemView("tabbar", () {
             Get.to(TabbarPage());
+          }),
+          itemView("动画", () {
+            Get.to(AnimationPage());
+          }),
+          itemView("3d陀螺仪", () {
+            Get.to(Image3DPage());
           }),
         ],
       ),

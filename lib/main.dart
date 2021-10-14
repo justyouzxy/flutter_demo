@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/main_page.dart';
+import 'package:flutter_demo/pages/3d_page.dart';
+import 'package:flutter_demo/pages/animation_page.dart';
 import 'package:flutter_demo/pages/switch_page.dart';
+import 'package:flutter_demo/pages/tabbar1_page.dart';
+import 'package:flutter_demo/pages/tabbar2_page.dart';
+import 'package:flutter_demo/pages/tabbar3_page.dart';
 import 'package:flutter_demo/pages/tabbar_page.dart';
 import 'package:get/get.dart';
 
@@ -25,9 +30,14 @@ class MyApp extends StatelessWidget {
 
 List<GetPage> pageList() {
   List<GetPage> pageList = [
-    GetPage(name: 'main_page', page: () => MainPage()),
+    GetPage(name: MainPage.routeName, page: () => MainPage()),
     GetPage(name: 'switch_page', page: () => SwitchPage()),
-    GetPage(name: 'tabbar_page', page: () => TabbarPage()),
+    GetPage(name: TabbarPage.routeName, page: () => TabbarPage()),
+    GetPage(name: 'animation_page', page: () => AnimationPage()),
+    GetPage(name: '3d_page', page: () => Image3DPage()),
+    GetPage(name: Tabbar1Page.routeName, page: () => Tabbar1Page()),
+    GetPage(name: Tabbar2Page.routeName, page: () => Tabbar2Page()),
+    GetPage(name: Tabbar3Page.routeName, page: () => Tabbar3Page()),
   ];
   return pageList;
 }

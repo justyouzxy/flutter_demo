@@ -30,10 +30,10 @@ class GSTopTabWidget extends StatelessWidget {
         labelStyle: TextStyle(
           color: Colors.blue,
           fontWeight: FontWeight.bold,
-          fontSize: GsFontSize.sp_36,
+          fontSize: 18,
         ),
         unselectedLabelStyle: TextStyle(
-          fontSize: GsFontSize.sp_36,
+          fontSize: 18,
           // fontWeight: FontWeight.bold,
         ),
       ),

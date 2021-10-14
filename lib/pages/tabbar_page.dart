@@ -1,10 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/pages/tabbar1_page.dart';
 import 'package:flutter_demo/pages/tabbar_detail.dart';
 import 'package:flutter_demo/widgets/tabbar/gs_tab_widget.dart';
 import 'package:flutter_demo/widgets/tabbar/gs_top_tabbar_widget.dart';
+import 'package:get/get.dart';
 
 class TabbarPage extends StatefulWidget {
+  static const routeName = "/TabbarPage";
   const TabbarPage({Key key}) : super(key: key);
 
   @override
@@ -12,7 +15,7 @@ class TabbarPage extends StatefulWidget {
 }
 
 class _TabbarPageState extends State<TabbarPage> {
-  List list = [
+  List<Widget> list = [
     Tab(child: Text("告警列表")),
     Tab(child: Text("事件")),
   ];
@@ -49,6 +52,13 @@ class _TabbarPageState extends State<TabbarPage> {
               ]),
             ),
           ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Get.toNamed(Tabbar1Page.routeName);
+          },
+          tooltip: 'Increment',
+          child: Icon(Icons.add),
         ),
       ),
     );
